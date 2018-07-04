@@ -4,44 +4,36 @@
 @import "variables";
 
 body {
-  max-width: 960px;
+  max-width: 700px;
   margin: auto;
-  background-color: $body_color;
-  font-family: sans-serif
+  background-color: $blue;
+  font-family: skia;
+  color: $white;
 }
 
 .header-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.title-description-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.header-title {
-  color: $header_title_color;
-  text-decoration: none;
-  font-family: skia;
-  font-size: 40px;
-  margin-right: 1%;
-}
-
-.header-tagline {
-  color: $header_tagline_color;
-  font-family: skia;
-  font-size: 20px;
-  margin-bottom: 5px;
-  white-space: nowrap;
+  margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-icons {
-  color: $header_tagline_color;
-  font-size: 30px;
+  color: $black;
+  font-size: 20px;
   margin-bottom: 4px;
+}
+
+.post-list-item {
+  color: $orange;
+  display: flex;
+  flex: 'row';
+  justify-content: space-between;
+
+  .link {
+    color: $orange;
+    text-decoration: none;
+    font-family: skia;
+    font-size: 20px;
+  }
 }
