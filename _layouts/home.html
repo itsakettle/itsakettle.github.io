@@ -7,10 +7,10 @@
 	<main>
 			{{ content }}
 			{% for post in site.posts %}
-			<div class=post-list-item>
-				<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-				<a class=link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-			</div>
+				<div class=post-list-item>
+					<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+					<a class=link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				</div>
 			{% endfor %}
 	</main>
 </body>

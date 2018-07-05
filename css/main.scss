@@ -8,7 +8,7 @@ body {
   margin: auto;
   background-color: $blue;
   font-family: skia;
-  color: $white;
+  color: $black;
 }
 
 .header-container {
@@ -26,12 +26,15 @@ body {
 
 .post-list-item {
   color: $orange;
+  background-color: $white;
+  border-radius: 10px;
+  height: 100px;
+  margin-bottom: 10px;
   display: flex;
-  flex: 'row';
   justify-content: space-between;
 
   .link {
-    color: $orange;
+    color: $black;
     text-decoration: none;
     font-family: skia;
     font-size: 20px;
