@@ -10,7 +10,7 @@
 			{% assign new_row = 0 %}
 			<div class=grid>
 				{% for post in site.posts %}
-					<div class=grid-item>
+					<div class=grid-item style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ post.image }})">
 						<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 						<a class=link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 					</div>
