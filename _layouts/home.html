@@ -6,12 +6,16 @@
 	{% include header.html %}
 	<main>
 			{{ content }}
-			{% for post in site.posts %}
-				<div class=post-list-item>
-					<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-					<a class=link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-				</div>
-			{% endfor %}
+			{% assign post_count = 0 %}
+			{% assign new_row = 0 %}
+			<div class=grid>
+				{% for post in site.posts %}
+					<div class=grid-item>
+						<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+						<a class=link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					</div>
+				{% endfor %}
+			</div>
 	</main>
 </body>
 

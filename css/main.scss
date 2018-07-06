@@ -24,19 +24,40 @@ body {
   margin-bottom: 4px;
 }
 
-.post-list-item {
-  color: $orange;
-  background-color: $white;
-  border-radius: 10px;
-  height: 100px;
-  margin-bottom: 10px;
+.grid {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
-  .link {
-    color: $black;
-    text-decoration: none;
-    font-family: skia;
-    font-size: 20px;
+  &-item {
+    width: 100%;
+    color: $orange;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+
+    @media (min-width: 48rem) {
+      width: 49%;
+      &:nth-child(odd) {
+        margin-right: 2%;
+      }
+    }
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+
   }
+
 }
+
+.link {
+  color: $black;
+  text-decoration: none;
+  font-family: skia;
+  font-size: 20px;
+}
+
