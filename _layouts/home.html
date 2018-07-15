@@ -10,9 +10,9 @@
 			{% assign new_row = 0 %}
 			<div class=grid>
 				{% for post in site.posts %}
-					<div class=grid-item style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ post.image }})">
+					<div class=grid-item style="background: linear-gradient(rgba(0, 0, 0, {{ post.image_darken }}), rgba(0, 0, 0, {{ post.image_darken }})), url({{ post.image }})">
 						<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-						<a class=post-link href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						<a class="post-link-{{ post.grid_text_color }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 					</div>
 				{% endfor %}
 			</div>

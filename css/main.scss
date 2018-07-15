@@ -16,24 +16,25 @@ body {
   margin-top: 5px;
   flex-direction: column;
   align-items: center;
-}
 
-.header-blurb {
-  color: $black;
-  font-size: 20px;
-  margin-bottom: 4px;
-  text-decoration: none;
-}
+  .blurb {
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 4px;
+    text-decoration: none;
+  }
+  
+  .icons {
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 4px;
+    text-decoration: none;
+  }
+  
+  .icons:hover {
+    color: $orange;
+  }
 
-.header-icons {
-  color: $black;
-  font-size: 20px;
-  margin-bottom: 4px;
-  text-decoration: none;
-}
-
-.header-icons:hover {
-  color: $orange;
 }
 
 .grid {
@@ -66,13 +67,21 @@ body {
 
   }
 
-}
+  %post-link {
+    text-decoration: none;
+    font-family: skia;
+    font-size: 20px;
+  }
 
+  .post-link-black {
+    @extend  %post-link;
+    color: $black;
+  }
 
-.post-link {
-  color: $white;
-  text-decoration: none;
-  font-family: skia;
-  font-size: 20px;
+  .post-link-white {
+    @extend  %post-link;
+    color: $white;
+  }
+
 }
 

@@ -4,6 +4,8 @@ title:  "Welcome to Jekyll!"
 date:   2018-04-24 21:48:48 +0100
 image: assets/test.jpg
 categories: jekyll update
+image_darken: 0.1
+grid_text_color: white
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
