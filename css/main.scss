@@ -18,10 +18,22 @@ body {
   align-items: center;
 }
 
+.header-blurb {
+  color: $black;
+  font-size: 20px;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
 .header-icons {
   color: $black;
   font-size: 20px;
   margin-bottom: 4px;
+  text-decoration: none;
+}
+
+.header-icons:hover {
+  color: $orange;
 }
 
 .grid {
@@ -34,11 +46,12 @@ body {
     background-color: $white;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     margin-bottom: 2%;
-    background-size: auto;
+    align-items: center;
 
-    @media (min-width: 48rem) {
+    @media (min-width: 30rem) {
       width: 49%;
       &:nth-child(odd) {
         margin-right: 2%;
@@ -48,15 +61,16 @@ body {
     &:before {
       content: "";
       float: left;
-      padding-top: 100%;
+      padding-top: 50%;
     }
 
   }
 
 }
 
-.link {
-  color: $black;
+
+.post-link {
+  color: $white;
   text-decoration: none;
   font-family: skia;
   font-size: 20px;
