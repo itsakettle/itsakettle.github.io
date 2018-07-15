@@ -23,6 +23,7 @@ twitter_username: itsakettle
 github_username:  itsakettle
 
 # Build settings
+permalink: /:title
 markdown: kramdown
 theme: minima
 plugins:

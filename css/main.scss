@@ -11,8 +11,16 @@ body {
   color: $black;
 }
 
+article {
+  background-color: $white;
+  padding: 2%;
+  margin-top: 2%;
+  overflow-x: auto;
+}
+
 .header-container {
   display: flex;
+  background-color: $blue;
   margin-top: 5px;
   flex-direction: column;
   align-items: center;
