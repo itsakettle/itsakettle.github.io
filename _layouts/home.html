@@ -8,12 +8,16 @@
 			{{ content }}
 			{% assign post_count = 0 %}
 			{% assign new_row = 0 %}
+			
 			<div class=grid>
 				{% for post in site.posts %}
-					<div class=grid-item style="background: linear-gradient(rgba(0, 0, 0, {{ post.image_darken }}), rgba(0, 0, 0, {{ post.image_darken }})), url({{ post.image }})">
-						<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-						<a class="post-link-{{ post.grid_text_color }}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-					</div>
+				<div class=grid-item>
+						<img class=grid-image style="max-width: {{ post.max_width }};"  src="{{ post.image }}">
+						<div class=grid-post-date-and-link>
+								<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+								<a class="grid-post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						</div>
+				</div>
 				{% endfor %}
 			</div>
 	</main>
