@@ -14,6 +14,7 @@ body {
 a {
   text-decoration: none;
   color: $blue;
+  border-bottom: 1px dotted;
 }
 
 article {
@@ -22,6 +23,10 @@ article {
   margin-top: 2%;
   overflow-x: auto;
   border-radius: 12px;
+}
+
+p {
+  line-height: 1.35;
 }
 
 img {
@@ -53,6 +58,7 @@ iframe {
     font-size: 20px;
     margin-bottom: 4px;
     text-decoration: none;
+    border-bottom: none;
   }
   
   .icons:hover {
