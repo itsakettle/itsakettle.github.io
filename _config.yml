@@ -26,6 +26,7 @@ github_username:  itsakettle
 permalink: /:title
 markdown: kramdown
 theme: minima
+highlighter: rouge
 plugins:
   - jekyll-feed
 
