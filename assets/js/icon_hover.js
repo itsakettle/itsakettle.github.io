@@ -1,7 +1,6 @@
+const iconHover = () => {
 
-window.onload = function() {
-
-  var iconDetail = document.getElementById('icon_detail');
+  let iconDetail = document.getElementById('icon_detail');
 
   $('#about').hover(function () {
         iconDetail.innerHTML = 'About';
@@ -28,8 +27,11 @@ window.onload = function() {
   });
 
   $('#privacy').hover(function () {
-    iconDetail.innerHTML = 'Privacy';
+    iconDetail.innerHTML = 'Privacy Policy';
   }, function () {
     iconDetail.innerHTML = '';
   });
 }
+
+
+window.addEventListener('load', iconHover)
