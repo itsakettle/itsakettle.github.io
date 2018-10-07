@@ -22,17 +22,7 @@
 			</a>
 				{% endfor %}
 			</div>
-			<div id=cookie_banner class=banner>
-				<div class=banner-content>
-						<span class=banner-text>
-								This site uses cookies for things like Google Analytics. You can view the Privacy Policy by clicking the cookie.
-						</span>
-						<div class=banner-buttons-container>
-							<a class=banner-dismiss href="{{ site.url }}/privacy_policy.html"><i class="fas fa-times"></i></a>
-							<a class=banner-privacy-policy href="{{ site.url }}/privacy_policy.html"><i class="fas fa-cookie"></i></a>
-					</div>
-				</div>
-			</div>
+			{% include banner.html %}
 	</main>
 </body>
 
