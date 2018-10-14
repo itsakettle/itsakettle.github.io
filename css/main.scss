@@ -58,7 +58,7 @@ iframe {
   }
   
   .icons {
-    color: $black;
+    fill: $black;
     font-size: 20px;
     margin-bottom: 4px;
     text-decoration: none;
@@ -66,7 +66,7 @@ iframe {
   }
   
   .icons:hover {
-    color: $orange;
+    fill: $orange;
   }
 
 }
@@ -130,7 +130,7 @@ iframe {
 }
 
 .banner {
-  height: 75px;
+  
   visibility: hidden;
   background-color: $orange;
   width: 100%;
@@ -149,6 +149,9 @@ iframe {
   }
 
   &-text {
+    text-align: center;
+    padding: 3px;
+    font-size: 15px;
     flex: 1;
     font-weight: bold;
     color: $black
@@ -164,8 +167,6 @@ iframe {
 
   &-dismiss {
     color: $black;
-    font-size: 40px;
-    margin-bottom: 4px;
     text-decoration: none;
     border-bottom: none;
     cursor: pointer;
@@ -173,8 +174,6 @@ iframe {
 
   &-privacy-policy {
     color: $black;
-    font-size: 40px;
-    margin-bottom: 4px;
     text-decoration: none;
     border-bottom: none;
   }

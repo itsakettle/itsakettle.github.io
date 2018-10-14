@@ -8,11 +8,26 @@
 			Will Rogers. Blog to learn.
 		</span>
 		<span>
-				<a id=about class=icons href="{{ site.url }}/about.html"><i class="fas fa-user"></i></a>
-				<a id=github class=icons href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
-				<a id=twitter class=icons href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
-				<a id=email class=icons href="mailto:{{site.email}}"><i class="fas fa-envelope"></i></a>
-				<a id=privacy class=icons href="{{ site.url }}/privacy_policy.html"><i class="fas fa-cookie"></i></a>
+				<a id=about class=icons href="{{ site.url }}/about.html">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+						<path  d="{{site.data.svg_icons.about.svg_path}}" />
+					</svg>
+				</a>
+				<a id=github class=icons href="https://github.com/{{ site.github_username }}">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+						<path  d="{{site.data.svg_icons.github.svg_path}}" />
+					</svg>
+				</a>
+				<a id=twitter class=icons href="https://twitter.com/{{ site.twitter_username }}">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+						<path  d="{{site.data.svg_icons.twitter.svg_path}}" />
+					</svg>
+				</a>
+				<a id=email class=icons href="mailto:{{site.email}}">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+						<path  d="{{site.data.svg_icons.email.svg_path}}" />
+					</svg>
+				</a>
 		</span>
 		<span id=icon_detail class=icon-descriptions> </span>
 	</div>

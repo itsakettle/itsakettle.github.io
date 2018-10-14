@@ -1,11 +1,21 @@
 <div id=cookie-banner class=banner>
   <div class=banner-content>
       <span class=banner-text>
-          This site uses cookies for things like Google Analytics. You can view the Privacy Policy by clicking the cookie.
+          This site uses cookies for things like Google Analytics. 
+          More information is in the Privacy Policy which you can view now
+          by clicking the cookie or later using the link at the bottom of the page.
       </span>
       <div class=banner-buttons-container>
-        <div id=banner-dismiss class=banner-dismiss><i class="fas fa-times"></i></div>
-        <a class=banner-privacy-policy href="{{ site.url }}/privacy_policy.html"><i class="fas fa-cookie"></i></a>
+        <div id=banner-dismiss class=banner-dismiss>
+          <svg style="width:36px;height:36px" viewBox="0 0 24 24">
+              <path  d="{{site.data.svg_icons.okay.svg_path}}" />
+            </svg>
+        </div>
+        <a class=banner-privacy-policy href="{{ site.url }}/privacy_policy.html">
+          <svg style="width:36px;height:36px" viewBox="0 0 24 24">
+              <path  d="{{site.data.svg_icons.cookie.svg_path}}" />
+          </svg>
+        </a>
     </div>
   </div>
 </div>
