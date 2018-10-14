@@ -54,7 +54,30 @@ iframe {
     color: $black;
     font-size: 20px;
     margin-bottom: 4px;
-    text-decoration: none;
+  }
+  
+  .icons {
+    fill: $black;
+    margin-bottom: 4px;
+  }
+  
+  .icons:hover {
+    fill: $orange;
+  }
+
+}
+
+.footer-container {
+  display: flex;
+  background-color: $blue;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .blurb {
+    color: $black;
+    font-size: 15px;
   }
   
   .icons {
