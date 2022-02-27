@@ -4,9 +4,9 @@ title:      "Autopilot"
 subtitle:   ""
 comments: true
 date:       2015-11-21
-image: "img/foffocd/bg_plane2b_dark.jpg"
+image: "assets/img/foffocd/bg_plane2b_dark.jpg"
 category: OCD
-image_scale: 100%
+image_width: 100%
 ---
 Reach for a cup, pet the dog, scratch one foot with the other foot, yawn, smile, blink.  
 
@@ -23,7 +23,7 @@ I'm hoping that the concept of _AutoPilot_ is familiar to everybody. So here I a
 Let's look at a really simple concept for how _AutoPilot_ works. Say it has two components - the thinking component _ThinkPilot_ and the doing component _DoPilot_. _ThinkPilot_ comes up with the thoughts and passes them to _DoPilot_ to carry out. So things look a little like this:
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo1.png" alt="AutoPilot_ThinkDo1"  />
+	<img src="assets/img/foffocd/autopilot/autopilot_ThinkDo1.png" alt="AutoPilot_ThinkDo1"  />
 </div>
 
 
@@ -36,7 +36,7 @@ _ThinkPilot_ generates thoughts randomly but it gets some inputs as well that di
 So the diagram above becomes a bit richer and looks like this:
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo2.png" alt="AutoPilot_ThinkDo2"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo2.png" alt="AutoPilot_ThinkDo2"  />
 </div>
 
 So as an example let's talk about Jenny who works for (the fictitious) Woof Transport Inc. in product development. Jenny is
@@ -48,7 +48,7 @@ So as an example let's talk about Jenny who works for (the fictitious) Woof Tran
 Let's push this example into _ThinkPilot_ and see what comes out.
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo3.png" alt="AutoPilot_ThinkDo3"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo3.png" alt="AutoPilot_ThinkDo3"  />
 </div>
 
 So the office joker Jenny is having a bad day and has certainly been in better form. She is midway through her big presentaton and suddenly she goes blank. Panic? No. _ThinkPilot_ reads the situation perfectly and before she knows it Jenny is executing the perfect Gripping Pause giving herself time to recover. Very composed.
@@ -56,7 +56,7 @@ So the office joker Jenny is having a bad day and has certainly been in better f
 Of course sometimes _ThinkPilot_ isn't so polished:
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo4.png" alt="AutoPilot_ThinkDo4"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo4.png" alt="AutoPilot_ThinkDo4"  />
 </div>
 
 In this scenario _ThinkPilot_ doesn't deliver and there are consequences. Jenny inadvertently shows the audience her inbox and in particular emails to her boyfriend giving out about her boss's ineptitude. Yikes.
@@ -64,7 +64,7 @@ In this scenario _ThinkPilot_ doesn't deliver and there are consequences. Jenny 
 _ThinkPilot_ can also just be absurd. 
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo5.png" alt="AutoPilot_ThinkDo5"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo5.png" alt="AutoPilot_ThinkDo5"  />
 </div>
 
 This time in the throws of panic Jenny gets the urge to bark like a dog. The whole company would think she has lost it, that she can't hack the pressure of presenting and that she is unprofessional. However, _DoPilot_ comes to the rescue, and in this instance knows not to do anything. Jenny just stands there, and soon _ThinkPilot_ comes up with a more reasonable idea.
@@ -72,7 +72,7 @@ This time in the throws of panic Jenny gets the urge to bark like a dog. The who
 So as we all know _DoPilot_ is clever enough to _filter_ out anything absurd. However maybe this doesn't fit too well into this hypothetical framework we have set up. It probably makes more sense for this _filter_ to be another component, rather than being contained within _DoPilot_. Welcome _FilterPilot_! Our _AutoPilot_ model now looks like this:
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo6.png" alt="AutoPilot_ThinkDo6"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo6.png" alt="AutoPilot_ThinkDo6"  />
 </div>
 
 _ThinkPilot_ is essentially a random thought generator but no absurd automatic thoughts are acted upon because of _FilterPilot_. Barking like a dog in the middle of a big presentation might not be great for Jenny's career, but what if the thought is more sinister like
@@ -90,7 +90,7 @@ These thoughts are malicious and unwanted but research shows that all human bein
 Sufferers of OCD are prone to a pyschological process known as **Thought Action Fusion**. This is where a person _feels_ that thinking something is the same as actually doing it. 
 
 <div align="center" >
-	<img src="/img/autopilot/autopilot_ThinkDo7.png" alt="AutoPilot_ThinkDo7"  />
+	<img src="/assets/img/foffocd/autopilot/autopilot_ThinkDo7.png" alt="AutoPilot_ThinkDo7"  />
 </div>
 
 This is very upsetting when it comes to automatic and unwanted thoughts. For instance the thought might be to push somebody in front of a bus after which the person with OCD will check several times that the person in front of them at the bus stop is still alive! The reality is that the thought is harmless with millions of people having it everyday. The problem is that the sufferer can't see this and attaches undeserved meaning to the thought.

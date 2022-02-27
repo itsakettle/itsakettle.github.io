@@ -13,7 +13,6 @@
 				{% for post in site.posts %}
 				<a class=grid-link href="{{ post.url | prepend: site.baseurl }}">
 					<div class=grid-item>
-							<img class=grid-image style="max-width: {{ post.max_width }};"  src="{{ post.image }}">
 							<div class=grid-post-date-and-link>
 									<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 									<div class="grid-post-title" >{{ post.category }} | </div>
