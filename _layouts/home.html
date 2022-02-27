@@ -16,6 +16,7 @@
 							<img class=grid-image style="max-width: {{ post.max_width }};"  src="{{ post.image }}">
 							<div class=grid-post-date-and-link>
 									<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+									<div class="grid-post-title" >{{ post.category }} | </div>
 									<div class="grid-post-title" >{{ post.title }}</div>
 							</div>
 					</div>

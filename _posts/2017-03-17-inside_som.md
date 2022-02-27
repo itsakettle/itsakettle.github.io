@@ -3,7 +3,7 @@ layout: post
 title:  "Inside a Self-Organising Map"
 date:   2017-03-17
 comments: true
-categories: som
+category: Data Science
 image: assets/img/inside_som/inside_som.png
 image_scale: 100%
 ---
