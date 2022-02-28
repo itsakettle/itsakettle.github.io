@@ -5,14 +5,14 @@ date:   2017-03-17
 comments: true
 category: Data Science
 image: assets/img/inside_som/inside_som.png
-image_width: 100%
+image_width: 50%
 ---
   
 
 
 When I first heard of _self-organising maps_ I wondered were they as cool as their name suggested. I have always been keen to look under the hood and see what the 'organisation' process looks like. So I forked [the kohonen Package on the CRAN github mirror](https://github.com/cran/kohonen) and gave it a go.
 
-# The SOM algorithm
+## The SOM algorithm
 The self-organising map (hereafter SOM) algorithm was introduced by [Teuvo Kohonen](https://en.wikipedia.org/wiki/Teuvo_Kohonen) in the 1980s. There is a good description of it in [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/). I will give a more informal and less complete description. The package [kohonen](https://cran.r-project.org/web/packages/kohonen/index.html) implements the algorithm in R. There are a lot of parameters and functionality which I will avoid describing in order to keep things simple. I just want to give a feel for how it all works.
 
 Say we have a bunch of unlabeled data with each observation consisting of n numeric variables. Each observation can be thought of as a point in $$\mathbb{R}^{n}$$. The [iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data set is a good example. Let's have a look at it.
@@ -78,7 +78,7 @@ Once the codes are arranged like this they all have neighbours. Each code has 8 
 
 Let's get back to the `iris` data and briefly demonstrate how SOM can be useful.
 
-# Iris
+## Iris
 
 First let's generate a map. I have just used the default configuration. The point here is not to show how to best produce a map, but rather to show how an SOM can be useful. 
 
@@ -170,7 +170,7 @@ From this plot we can observe:
 
 * The versicolor and virginica species (2s and 3s in the plot above) seem to vary mostly by their sepal length and sepal width.
 
-# Inside an SOM
+## Inside an SOM
 
 Hopefully the examples above show how an SOM can be useful for understanding a high dimensional data set. Now let's look at how the map 'organises' itself. Since we can't visualise 4 dimensions let's simplify things and just use two columns of the iris data set. Moreover, since reducing 2 dimensions to 2 dimensions isn't very worthwhile, instead let's reduce from 2 dimensions to 1 i.e. we specify an 5x1 SOM grid.
 
@@ -217,7 +217,7 @@ where $$x_i$$ and $$d_i$$ are the ith component of $$x$$ and $$d$$ in $$\mathbb{
 
 Even though I knew how all this worked I wanted to better understand what this process looks like. So I [forked](https://github.com/itsakettle/kohonen) the kohonen package from the CRAN read only mirror and added some code to record the positions of the codes after each data point is shown to the algorithm. The result was then used to create an animation of the map organising itself. 
 
-# Animating
+## Animating
 
 The _animation_ package in R is great for animating! To animate we need a function that can create a plot of the codes of the SOM at a given snapshot. Here's the function I used, it's a bit messy but does the job. You can see the results below.
 
@@ -273,7 +273,7 @@ PlotSOMSnapshot <- function(dt, codes, current, previous, r, next.data.point=TRU
 }
 {% endhighlight %}
 
-# One observation at a time
+## One observation at a time
 First let's look at 20 consecutive iterations of the algorithm at different stages of the learning process. This will help us get a feel for 
 
 * the nearest code to the data point moving towards the data point
@@ -380,7 +380,7 @@ saveVideo({
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_Ok8dvdNxko?rel=0" frameborder="0" allowfullscreen></iframe>
 
-# Knowledge vs Understanding
+## Knowledge vs Understanding
 For me this little experiment is a demonstration of knowledge vs understanding. [This](https://www.youtube.com/watch?v=MFzDaBzBlL0) video from Smarter Every Day explains this nicely and there is also an analogous clicking into place moment. 
 
 I knew how a self-organising map works but I didn't understand. Looking under the hood certainly helped me to understand why the algorithm works. I found it very useful to see how the codes and their neighbours all move together and how this is key to creating a 'map'. By seeing the position of the codes as the algorithm progresses we can get a really good feel for how the algorithm is working. 

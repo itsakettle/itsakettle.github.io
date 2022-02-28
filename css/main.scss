@@ -11,6 +11,11 @@ body {
   font-family: skia;
   color: $black;
 }
+
+h1 {
+  font-size: 40px;
+}
+
 a {
   text-decoration: none;
   color: $blue;
@@ -22,7 +27,7 @@ article {
   padding: 2%;
   margin-top: 2%;
   overflow-x: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 p {
@@ -118,8 +123,10 @@ iframe {
     border-color: transparent;
     border-width: 1px;
     padding-top: 2%;
-    padding-bottom: 5%;
-    border-radius: 17px;
+    padding-bottom: 2%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
   }
 
   &-item:hover {
@@ -127,7 +134,7 @@ iframe {
   }
   
   &-image {
-    border-radius: 17px;
+    border-radius: 10px;
     margin-bottom: 2%;
     height: auto;
   }
