@@ -18,7 +18,6 @@ Google Analytics is used to understand how the site is being viewed e.g. things 
 By using or accessing the website you are consenting to the use of the following cookies:
 
 * Google analytics
-* Mathjax (for displaying equations)
 * The site itself uses a cookie to remember that you seen the banner that is displayed when no such cookie exists.
 
 ## Personal Data
