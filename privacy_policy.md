@@ -8,12 +8,13 @@ layout: default
 Hi. Here's some privacy information for itsakettle.ie.
 
 ## Google Analytics
-Google Analytics is used to understand how the site is being viewed e.g. things like page views and audience location. No personally identifable data is recored and IP anonymisation is turned on. Google analytic uses cookies and by using or accessing the website you are consenting to the use of such cookies.
+Google Analytics is used to understand how the site is being viewed e.g. things like page views and audience location. No personally identifable data is recorded and IP anonymisation is turned on. 
 
-## Other cookies
+## Cookies
+By using or accessing the website you are consenting to the use of the following cookies:
 
-
-* Mathjax
+* Google analytics
+* Mathjax (for displaying equations)
 
 ## Personal Data
 No personally identifiable information is collected. As noted above, Google Analytics IP anonymisation is turned on.
