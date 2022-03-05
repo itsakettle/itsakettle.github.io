@@ -1,9 +1,19 @@
 // Display the banner on page load
+
+const currentTimeSeconds = () => {
+  return Math.round(new Date().getTime()/1000)
+}
+
 const bannerVisibility = () => {
 
-  let bannerStatus = localStorage.bannerStatus;
+  let bannerDismissTime = localStorage.bannerDismissTime;
+  let bannerRefreshDays = 60;
+  let bannerRefreshSeconds = bannerRefreshDays*24*60*60;
+  let currentTime = currentTimeSeconds()
 
-  if (bannerStatus != 'dismissed') {
+  if (bannerDismissTime == null) {
+    $('#cookie-banner').css({visibility: 'visible'})
+  } else if ( (currentTime - bannerDismissTime)  > bannerRefreshSeconds) {
     $('#cookie-banner').css({visibility: 'visible'})
   }
   
@@ -11,7 +21,7 @@ const bannerVisibility = () => {
 
 const bannerDismiss = () => {
   $('#banner-dismiss').click(function () {
-    localStorage.bannerStatus = 'dismissed';
+    localStorage.bannerDismissTime =currentTimeSeconds();
     $('#cookie-banner').css({visibility: 'hidden'})
   });
 }
