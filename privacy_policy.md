@@ -18,7 +18,6 @@ Google Analytics is used to understand how the site is being viewed e.g. things 
 By using or accessing the website you are consenting to the use of the following cookies:
 
 * Google analytics
-* The site itself uses a cookie to remember that you have seen the privacy policy banner.
 
 ## Personal Data
 No personally identifiable information is collected. As noted above, Google Analytics IP anonymisation is turned on.
