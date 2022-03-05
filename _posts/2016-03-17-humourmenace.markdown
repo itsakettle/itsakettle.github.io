@@ -3,8 +3,9 @@ layout:     post
 title:      "Humour & Menace"
 subtitle:   ""
 date:       2016-03-17 16:00:00
-author:     "Will"
-header-img: "assets/img/foffocd/birds.jpg"
+image: "assets/img/foffocd/birds.jpg"
+category: OCD
+image_width: 100%
 ---
 
 There are many pubs in Dublin with great social histories. My family has always gone to one pub in particular and behind the bar there is a plaque

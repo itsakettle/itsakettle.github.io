@@ -2,7 +2,6 @@
 layout:     post
 title:      "Autopilot"
 subtitle:   ""
-comments: true
 date:       2015-11-21
 image: "assets/img/foffocd/bg_plane2b_dark.jpg"
 category: OCD

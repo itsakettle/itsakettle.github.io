@@ -3,8 +3,9 @@ layout:     post
 title:      "Mindfulness and CBT"
 subtitle:   ""
 date:       2016-07-15 15:00:00
-author:     "Will"
-header-img: "assets/img/foffocd/mindfulnessocd/wavingintothewind.jpg"
+image: "assets/img/foffocd/mindfulnessocd/wavingintothewind.jpg"
+category: OCD
+image_width: 100%
 ---
 In March on a beach in Connemara I was walking my dog and my wife, with a gale blowing in off the Atlantic. There is a sandbar separating one bay from another with waves hitting both sides of the beach. Below is a picture of this sandbar on a calm day, while above the gale was rushing on shore, blowing across the sandbar and catching the top of the waves on the far shore, spraying them backwards - it got me thinking.
 
