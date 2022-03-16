@@ -211,7 +211,7 @@ Let's see how all this come about. In the SOM algorithm the entire data set is s
 
 Each time a data point $$d$$ is shown to the algorithm, the position of the code nearest to the data point and the neighbours of this code are updated based on:
 
-$$x_i = x_i + \alpha (d_i - x_i)$$
+[//]: # (latex $$x_i = x_i + \alpha (d_i - x_i)$$)
 
 where $$x_i$$ and $$d_i$$ are the ith component of $$x$$ and $$d$$ in $$\mathbb{R}^{n}$$ and $$\alpha$$ is the learning rate. The default is for the learning rate $$\alpha$$ to decrease linearly from 0.05 to 0.01 over each pass of the full dataset. 
 
