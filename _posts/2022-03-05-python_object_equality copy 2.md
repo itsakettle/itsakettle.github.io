@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "GPT embeddings"
+title:      "Object equality in Python"
 subtitle:   
 date:       2023-10-23
 image: "assets/img/python_object_equality/python_object_equality_main.png"

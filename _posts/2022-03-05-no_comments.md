@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "No comments?"
+title:      "Why can't I leave comments?"
 subtitle:   ""
 date:       2022-03-05
 image: 
-tags: misc
+tag: no comments?
 image_width: 100%
 ---
 

@@ -146,14 +146,14 @@ iframe {
     color: $orange;
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    font-size: 17px;
     font-family: skia;
     color: $black;
     padding-top: 3%;
     
 
     @media screen and (max-width: 400px) {
-      font-size: 14px;
+      font-size: 6px;
     }
 
   }
