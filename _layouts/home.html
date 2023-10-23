@@ -6,18 +6,19 @@
 	{% include header.html %}
 	<main>
 			{{ content }}
-			{% assign post_count = 0 %}
-			{% assign new_row = 0 %}
+			{% assign current_yymm = "" %}
 			
 			<div class=grid>
 				{% for post in site.posts %}
+				{% assign post_yymm = post.date | date: "%Y%m"  %}
+				{% if post_yymm != current_yymm %}
+					{% assign current_yymm = post_yymm %}
+					<div class="grid-month-year-title" >{{ post.date | date: "%B %Y" }}</div>
+				{% endif %}
 				<a class=grid-link href="{{ post.url | prepend: site.baseurl }}">
 					<div class=grid-item>
-							<div class=grid-post-date-and-link>
-									<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-									<div class="grid-post-title" >{{ post.category }} | </div>
-									<div class="grid-post-title" >{{ post.title }}</div>
-							</div>
+							<div class="grid-post-title" >{{ post.title }}</div>
+							<div class="grid-post-tags">{{ post.tags | join: ", " }}</div>
 					</div>
 			</a>
 				{% endfor %}
