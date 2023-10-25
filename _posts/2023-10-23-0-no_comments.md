@@ -1,8 +1,9 @@
 ---
 layout:     post
 title:      "Why can't I leave comments?"
+permalink:  "0"
 subtitle:   ""
-date:       2022-03-05
+date:       2023-10-23
 image: 
 tag: no comments?
 image_width: 100%

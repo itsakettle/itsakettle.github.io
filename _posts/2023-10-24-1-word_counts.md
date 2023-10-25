@@ -1,8 +1,9 @@
 ---
 layout:     post
 title:      "Word Counts"
+permalink: "1"
 subtitle:   
-date:       2023-10-25
+date:       2023-10-24
 image: 
 published: true
 tag: word count

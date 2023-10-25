@@ -6,10 +6,22 @@
 	{% include header.html %}
 	<main>
 			{{ content }}
+
+
+
 			{% assign current_yymm = "" %}
-			
+			{% assign posts_ordered_by_permalink = site.posts | sort: 'permalink' | reverse %}
+			{% assign posts_ordered_by_date = site.posts | sort: 'date' | reverse %}
+			{% assign dates_and_permalinks_match = true %}
+			{% for i in (0..posts_ordered_by_permalink.size) %}
+				{% unless posts_ordered_by_permalink[i] == posts_ordered_by_date[i] %}
+					{% assign dates_and_permalinks_match = false %}
+				{% endunless %}
+			{% endfor %}
+
+			{% if dates_and_permalinks_match %}
 			<div class=grid>
-				{% for post in site.posts %}
+				{% for post in posts_ordered_by_permalink %}
 				{% assign post_yymm = post.date | date: "%Y%m"  %}
 				{% assign post_words = post.content | number_of_words %}
 				{% if post_yymm != current_yymm %}
@@ -21,7 +33,7 @@
 				{% endif %}
 				<a class=grid-link href="{{ post.url | prepend: site.baseurl }}">
 					<div class=grid-item>
-							<div class="grid-post-title" >{{ post.title }}</div>
+							<div class="grid-post-title" >#{{ post.permalink }} | {{ post.title }} </div>
 							<div class="grid-post-tags-words-container">
 								<div class="grid-post-tags">{{ post_words }} words</div>
 								{% for tag in post.tags %}
@@ -32,6 +44,13 @@
 			</a>
 				{% endfor %}
 			</div>
+
+			{% else %}
+
+			<div>Order of post dates don't match permalinks.</div>
+
+			{% endif%
+
 			{% include banner.html %}
 	</main>
 	{% include footer.html %}

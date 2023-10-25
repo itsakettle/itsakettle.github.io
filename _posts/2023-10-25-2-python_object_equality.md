@@ -1,8 +1,9 @@
 ---
 layout:     post
 title:      "Equality in Python"
+permalink: "2"
 subtitle:   
-date:       2023-10-23
+date:       2023-10-25
 image: "assets/img/python_object_equality/python_object_equality_main.png"
 published: true
 tags: [python3, refresher]
