@@ -4,6 +4,10 @@
 @import "variables";
 @import "_syntax_highlighting";
 
+code {
+  font-size: 14px;
+}
+
 body {
   max-width: 700px;
   margin: auto;
@@ -32,6 +36,7 @@ article {
 
 p {
   line-height: 1.35;
+  font-size: 14px;
 }
 
 img {
@@ -129,11 +134,7 @@ iframe {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    width: fit-content;
-  }
-
-  &-item:hover {
-    border-color: $black;
+    width: 100%;
   }
   
   &-image {
@@ -143,13 +144,13 @@ iframe {
   }
 
   &-month-year-title {
-    color: $orange;
     display: flex;
     justify-content: center;
     font-size: 17px;
     font-family: skia;
+    font-weight: bold;
     color: $black;
-    padding-top: 3%;
+    padding-bottom: 10px;
     
 
     @media screen and (max-width: 400px) {
@@ -158,10 +159,13 @@ iframe {
 
   }
 
+  &-gap-between-months {
+    height: 30px;
+    width: 50%;
+  }
+
   &-post-title {
     color: $orange;
-    display: flex;
-    justify-content: center;
     font-size: 23px;
     font-family: skia;
     color: $white;
@@ -174,20 +178,60 @@ iframe {
 
   }
 
-
-  &-post-tags {
-    color: $orange;
+  &-post-tags-words-container {
     display: flex;
     justify-content: center;
-    font-size: 15px;
-    font-family: skia;
-    color: $orange;
     
+  }
+
+
+  &-post-tags {
+    background-color: $orange;
+    color: $black;
+    padding: 2px;
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    font-size: 11px;
+    font-family: skia;
+    margin-right: 10px;
+    white-space: nowrap;
 
     @media screen and (max-width: 400px) {
-      font-size: 10px;
+      font-size: 7px;
     }
 
+  }
+
+}
+
+.post {
+  
+  &-date {
+    padding-bottom: 4px;
+  }
+
+  &-tags-words-container {
+    display: flex;
+    justify-content: left;
+    
+  }
+
+  &-tags {
+    background-color: $orange;
+    color: $black;
+    padding: 3px;
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    font-size: 13px;
+    font-family: skia;
+    margin-right: 10px;
+    white-space: nowrap;
+
+    @media screen and (max-width: 400px) {
+      font-size: 9px;
+    }
   }
 
 }

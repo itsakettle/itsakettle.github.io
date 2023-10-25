@@ -2,6 +2,10 @@ pre.highlight {
 	padding: 1em;
 }
 
+.highlighter-rouge {
+	background-color: $inline_code;
+}
+
 .highlight {
 	background-color: #49483e;
 	font-family: $syntax_font;
