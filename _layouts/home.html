@@ -5,43 +5,50 @@
 <body>
 	{% include header.html %}
 	<main>
-			{{ content }}
 
+			{% comment %}
+			Check for post permalinks order not matching posts date order. Liquid is limited so this is hard
+			mostly becuase sort doesn't sort negatives properly and sometimes negative int permalinks are used.
+			We leverage posts already being ordered by date.
+			{% endcomment %}
 
-
-			{% assign current_yymm = "" %}
-			{% assign posts_ordered_by_permalink = site.posts | sort: 'permalink' | reverse %}
-			{% assign posts_ordered_by_date = site.posts | sort: 'date' | reverse %}
 			{% assign dates_and_permalinks_match = true %}
-			{% for i in (0..posts_ordered_by_permalink.size) %}
-				{% unless posts_ordered_by_permalink[i] == posts_ordered_by_date[i] %}
+			{% assign posts_for_permalink_check = site.posts  %}
+			{% assign last_permalink_as_int = posts_for_permalink_check[0].permalink | to_integer %}
+			{% assign max_i = posts_for_permalink_check.size | minus: 1 %}
+			{% for i in (1..max_i) %}
+				{% assign this_permalink_as_int = posts_for_permalink_check[i].permalink | to_integer %}
+				{% assign this_permalink_as_int_should_equal = last_permalink_as_int | minus: 1 %}
+				{% unless this_permalink_as_int == this_permalink_as_int_should_equal  %}
 					{% assign dates_and_permalinks_match = false %}
 				{% endunless %}
+				{% assign last_permalink_as_int = this_permalink_as_int   %}
 			{% endfor %}
 
 			{% if dates_and_permalinks_match %}
 			<div class=grid>
-				{% for post in posts_ordered_by_permalink %}
-				{% assign post_yymm = post.date | date: "%Y%m"  %}
-				{% assign post_words = post.content | strip_html | number_of_words %}
-				{% if post_yymm != current_yymm %}
-						{% if current_yymm != "" %}
-						<div class="grid-gap-between-months"></div>
-						{% endif %}
-					{% assign current_yymm = post_yymm %}
-					<div class="grid-month-year-title" >{{ post.date | date: "%B %Y" }}</div>
-				{% endif %}
-				<a class=grid-link href="{{ post.url | prepend: site.baseurl }}">
-					<div class=grid-item>
-							<div class="grid-post-title" >#{{ post.permalink }} | {{ post.title }} </div>
-							<div class="grid-post-tags-words-container">
-								<div class="grid-post-tags">{{ post_words }} words</div>
-								{% for tag in post.tags %}
-								<div class="grid-post-tags">{{ tag }}</div>
-								{% endfor %}
-							</div>
-					</div>
-			</a>
+				{% assign current_yymm = "" %}
+				{% for post in site.posts %}
+					{% assign post_yymm = post.date | date: "%Y%m"  %}
+					{% assign post_words = post.content | strip_html | number_of_words %}
+					{% if post_yymm != current_yymm %}
+							{% if current_yymm != "" %}
+							<div class="grid-gap-between-months"></div>
+							{% endif %}
+						{% assign current_yymm = post_yymm %}
+						<div class="grid-month-year-title" >{{ post.date | date: "%B %Y" }}</div>
+					{% endif %}
+					<a class=grid-link href="{{ post.url | prepend: site.baseurl }}">
+						<div class=grid-item>
+								<div class="grid-post-title" >#{{ post.permalink }} | {{ post.title }} </div>
+								<div class="grid-post-tags-words-container">
+									<div class="grid-post-tags">{{ post_words }} words</div>
+									{% for tag in post.tags %}
+									<div class="grid-post-tags">{{ tag }}</div>
+									{% endfor %}
+								</div>
+						</div>
+				  </a>
 				{% endfor %}
 			</div>
 
