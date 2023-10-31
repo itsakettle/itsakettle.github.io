@@ -12,7 +12,7 @@ body {
   max-width: 700px;
   margin: auto;
   background-color: $blue;
-  font-family: skia;
+  font-family: $main_font;
   color: $black;
 }
 
@@ -22,8 +22,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: $blue;
-  border-bottom: 1px dotted;
+  
 }
 
 article {
@@ -119,6 +118,8 @@ iframe {
 
   &-link {
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
   &-item {
@@ -126,7 +127,6 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-style: dashed;
     border-color: transparent;
     border-width: 1px;
     padding-top: 3%;
@@ -147,7 +147,7 @@ iframe {
     display: flex;
     justify-content: center;
     font-size: 17px;
-    font-family: skia;
+    font-family: $main_font;
     font-weight: bold;
     color: $black;
     padding-bottom: 10px;
@@ -167,7 +167,7 @@ iframe {
   &-post-title {
     color: $orange;
     font-size: 23px;
-    font-family: skia;
+    font-family: $main_font;
     color: $white;
     padding-bottom: 1%;
     
@@ -193,7 +193,7 @@ iframe {
     border-radius: 3px;
     justify-content: center;
     font-size: 11px;
-    font-family: skia;
+    font-family: $main_font;
     margin-right: 10px;
     white-space: nowrap;
 
@@ -225,7 +225,7 @@ iframe {
     border-radius: 3px;
     justify-content: center;
     font-size: 13px;
-    font-family: skia;
+    font-family: $main_font;
     margin-right: 10px;
     white-space: nowrap;
 
