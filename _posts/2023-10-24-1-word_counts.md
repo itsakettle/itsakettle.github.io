@@ -23,7 +23,7 @@ y = x*2
 z = y*3
 {% endhighlight %}
 
-When I manually count the words in this article I get about 126. Close enough.
+When I manually count the words in this article I get about 114. Close enough.
 
 _____
 
