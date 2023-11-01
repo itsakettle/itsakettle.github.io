@@ -26,6 +26,7 @@ permalink: /:title
 markdown: kramdown
 theme: minima
 highlighter: rouge
+google_analytics: G-6VPB3Y89K2
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
