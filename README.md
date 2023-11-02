@@ -6,7 +6,7 @@
 
 ## Google analytics
 * Google analytics is off unless `jekyll.environment == "production"`. 
-* `jekyll.environment` will be `development` serving/building locally using `bundle exec jekyll serve` or `bundle exec jekyll build`. 
+* `jekyll.environment` will be `development` when serving/building locally using `bundle exec jekyll serve` or `bundle exec jekyll build`. 
 * Github pages explicitly sets the environment to production i.e. `JEKYLL_ENV=production bundle exec jekyll build`.
 
 ## Permalinks
