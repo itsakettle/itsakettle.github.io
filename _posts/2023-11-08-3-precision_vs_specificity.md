@@ -3,7 +3,7 @@ layout:     post
 title:      "Precision vs Specificity"
 permalink: "3"
 subtitle:   
-date:       2023-11-01
+date:       2023-11-08
 image: "assets/img/3/main.png"
 published: true
 tags: [ML, refresh]
@@ -12,9 +12,9 @@ image_width: 100%
 
 ## Summary
 
-* Use Specificity when there is a treatment cost for the testee.
+* Specificity makes sense when there is a treatment cost for the testee.
 
-* Use Precision when there is a treatment cost for the tester.
+* Precision makes sense when there is a treatment cost for the tester.
 
 * Both of these may apply.
 
@@ -76,21 +76,22 @@ image_width: 100%
 ## When to use Specificity
 * Imagine it's your wedding and you ask all guests to test for Covid beforehand. If they get a positive result you ask them not to attend.
 
-* The cost of treatment is large for testee they miss out on wedding. It's also could be large for the tester if they lose a lot of guests but if they just lose a few then it's not so bad.
+* The cost of treatment is large for a testee since they miss out on wedding. It also could be large for the tester if they lose a lot of guests but if they just lose a few then it's not so bad.
 
-* Say there are 100 guests.
+* Say there are 100 guests, 10 guests have positive results, there are no False Negatives and 5 guests are False positives. 
 
-* Specificity is more important here because we want to know what proportion of guests who don't have Covid who we are excluded from the wedding. What % of guests will unnecessarily experience this cost?
+* Precison tells us that 50% of the guests we excluded (5/10) from the wedding were excluded unnecessarily.
 
-* From the testers point of the cost relates to missing guests from the wedding. What % of this cost was needless.
+* Specificity tells us 94.7% of truly negative guests (90/95) were unimpacted by the policy which means that 5.3% were impacted. 
 
-* imagine 10 guests hae positive results. There are no False Negatives. 5 guests are False positives. 5/95 guests were impacted unnecessarily Specificity. 50% of the guests we excluded fromt the wedding were excluded unnecessarily Precision.
+* Losing a few guests from a wedding is standard so while 50% Precision looks big, the cost to the tester is actually low. So Precision is less important.
 
-* Now imagine that we don't mind about losing 10 guests and the cost to us is much less important. Then Specificity is the measure we are interested in. The cost to the testee is much more than the tester.
+* On the other hand missing out on the wedding is a bigger deal for the excluded guests who were False Positives. So Specificity is the better metric to use in this case.
 
 ## What about Recall and Sensitivity?
 
 * When evaluating a test:
+
   - Precision is often paired with Recall e.g. Precision Recall curves.
 
   - Specificity is often paired with Sensitivity e.g. Receiving Operating Characteristic (ROC) curves.
@@ -105,5 +106,6 @@ image_width: 100%
 
 * Notice that Specificity mirrors Recall/Sensitivity except it focuses on True Negatives i.e. `P(TN | N)` vs `P(TP | P)`. So specificity really seems like a natural metric to use along side Recall/Sensitivity.
 
+* Recall/Sensitivity is important when considering the cost of doing the test rather than the cost of the treatment. For example if a test has low Recall/Sensitivity, say 5%, you wouldn't take it if it cost lots of money, but if it was free and effortless, then why not. 
 
 _____
