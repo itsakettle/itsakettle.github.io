@@ -42,9 +42,9 @@ image_width: 100%
 
 * There are two points of view when conducting a test:
 
-  * The testee is is being tested.
+  * The testee who is being tested.
 
-  * The tester is carrying out or designing the test.
+  * The tester who is carrying out or designing the test.
 
 
 ## Precision
@@ -62,11 +62,9 @@ image_width: 100%
 * The probability of receiving a negative result if truly negative.
 
 ## Example of when Precision is important
-* Imagine a machine learning classifier classifies customers as likely to churn or not. Say all customers with a positive result are given a €10 voucher. To simplify things let's say they get the voucher whether they stay or not.
+* Imagine a machine learning classifier classifies customers as likely to churn or not. The tester is the company trying to stop churn and the testee is each individual customer.
 
-* The cost of doing the test for the customer (testee) is zero since doing the test just involves inputting the customers data into the model. Of course this assumes the customers privacy is respected.
-
-* The marginal cost (i.e. excluding the various costs of training the model) for the test for the business (tester) is just the compute cost and is probably low.
+* Say all customers with a positive result are given a €10 voucher. To simplify things let's say they get the voucher whether they stay or not.
 
 * The cost of treatment to the customer is zero since they get a €10 voucher.
 
@@ -80,15 +78,15 @@ image_width: 100%
 
 ## Example of when Specificity is important
 
-*  Imagine a spam filter for email. The tester is the company that provide the email service and the testee are the user emails that are classified as spam or not.
+*  Imagine a spam filter for email. The tester is the company that provide the email service and the testee is each user email that is classified as spam or not.
 
-* The marginal cost of redirecting an email to the users spam folder is zero. So there is no treatment cost for the tester.
+* The marginal cost of redirecting an email to the users spam folder is negligible. So there is no treatment cost for the tester.
 
 * If an email is flagged as spam the user will not see it (assuming they don't check their spam folder) and could miss out on important information. So the treatment cost for the testee is greater.
 
-* So Specificity is more important in this case as it measures how many legitimate emails were not shown to the recipient and each of these instances has a definite cost to the testee alone.
+* So Specificity is more important in this case as it measures how many legitimate emails were not shown to the recipient and each of these instances has a definite cost to the user.
 
-* Precision is still an interesting metric but it's less important since there is no cost to the tester.
+* Precision is still an interesting metric but it's less important since there is no cost of treatment for the tester.
 
 ## What about Recall and Sensitivity?
 
