@@ -38,13 +38,14 @@ image_width: 100%
 
   * False Negatives (FN)
 
-* Metrics such as Precision, Recall, Specificity, Sensitivity and many more can be calculated from the entries in a confusion matrix.
+* Metrics such as Precision, Recall, Specificity, Sensitivity and others can be calculated from the entries in a confusion matrix.
 
 * There are two points of view when conducting a test:
 
+  * The tester who is carrying out or designing the test.
+
   * The testee who is being tested.
 
-  * The tester who is carrying out or designing the test.
 
 
 ## Precision
@@ -70,9 +71,11 @@ image_width: 100%
 
 * The cost of treament for the business is €10.
 
-* Since the main False Positive cost relates to the treatment it makes sense to measure what % of treatments were not actually required i.e. Precision.
+* Precision is meaningful since it tells the business how many of the €10s they will spend are truly worth it.
 
-* There are other costs relating to False Negatives which we're not considering here and also potential costs relating to True Positives if the voucher doesn't prevent churn!
+* Specificity is less meaningful since there is only upside for customers if the test comes back positive.
+
+* There are other costs relating to False Negatives which we're not considering here. The business should also evaluate the efficacy of the €10 gift.
 
 * If the cost of treatment, monetory or otherwise, is zero then the test is pointless, since we can just give all testees treatment with no cost.
 
@@ -107,5 +110,9 @@ image_width: 100%
 * Notice that Specificity mirrors Recall/Sensitivity except it focuses on True Negatives i.e. `P(TN | N)` vs `P(TP | P)`. So specificity really seems like a natural metric to use along side Recall/Sensitivity.
 
 * Recall/Sensitivity is important when considering the cost of doing the test rather than the cost of the treatment. For example if a test has low Recall/Sensitivity, say 5%, you wouldn't take it if it cost lots of money, but if it was free and effortless, then why not. 
+
+## Updates
+
+* **09-11-2023** Improved examples.
 
 _____
