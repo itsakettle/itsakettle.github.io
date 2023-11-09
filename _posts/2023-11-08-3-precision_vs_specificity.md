@@ -24,7 +24,7 @@ image_width: 100%
 
   * A binary machine learning classifier.
 
-  * A Covid-19 antigen test.
+  * A test for an illness.
 
   * Guessing whether a flipped coin will come up heads or tails.
 
@@ -38,9 +38,15 @@ image_width: 100%
 
   * False Negatives (FN)
 
-* Metrics such as Precision, Recall, Specificity, Sensitivity and many more can be calculated from the entries in a confusion matrix.
+* Metrics such as Precision, Recall, Specificity, Sensitivity and others can be calculated from the entries in a confusion matrix.
 
-* There are two points of view when conducting a test: the tester and the testee. This is important when considering how to evaluate the efficacy of a particular test. The tester and testee could be the same person.
+* There are two points of view when conducting a test:
+
+  * The tester who is carrying out or designing the test.
+
+  * The testee who is being tested.
+
+
 
 ## Precision
 * `TP/(TP+FP)`
@@ -56,37 +62,34 @@ image_width: 100%
 
 * The probability of receiving a negative result if truly negative.
 
-## Precision Example
-* Imagine a machine learning classifier classifies customers as likely to churn or not. Say all customers with a positive result are given a €10 voucher. To simplify things let's say they get the voucher whether they stay or not.
+## Example of when Precision is important
+* Imagine a machine learning classifier classifies customers as likely to churn or not. The tester is the company trying to stop churn and the testee is each individual customer.
 
-* The cost of doing the test for the customer (testee) is zero since doing the test just involves inputting the customers data into the model. Of course this assumes the customers privacy is respected.
-
-* The marginal cost (i.e. excluding the various costs of training the model) for the test for the business (tester) is just the compute cost and is probably low.
+* Say all customers with a positive result are given a €10 voucher. To simplify things let's say they get the voucher whether they stay or not.
 
 * The cost of treatment to the customer is zero since they get a €10 voucher.
 
 * The cost of treament for the business is €10.
 
-* Since the main False Positive cost relates to the treatment it makes sense to measure what % of treatments were not actually required i.e. Precision.
+* Precision is meaningful since it tells the business how many of the €10s they will spend are truly worth it.
 
-* There are other costs relating to False Negatives which we're not considering here and also potential costs relating to True Positives if the voucher doesn't prevent churn!
+* Specificity is less meaningful since there is only upside for customers if the test comes back positive.
+
+* There are other costs relating to False Negatives which we're not considering here. The business should also evaluate the efficacy of the €10 gift.
 
 * If the cost of treatment, monetory or otherwise, is zero then the test is pointless, since we can just give all testees treatment with no cost.
 
-## When to use Specificity
-* Imagine it's your wedding and you ask all guests to test for Covid beforehand. If they get a positive result you ask them not to attend.
+## Example of when Specificity is important
 
-* The cost of treatment is large for a testee since they miss out on wedding. It also could be large for the tester if they lose a lot of guests but if they just lose a few then it's not so bad.
+*  Imagine a spam filter for email. The tester is the company that provide the email service and the testee is each user email that is classified as spam or not.
 
-* Say there are 100 guests, 10 guests have positive results, there are no False Negatives and 5 guests are False positives. 
+* The marginal cost of redirecting an email to the users spam folder is negligible. So there is no treatment cost for the tester.
 
-* Precison tells us that 50% of the guests we excluded (5/10) from the wedding were excluded unnecessarily.
+* If an email is flagged as spam the user will not see it (assuming they don't check their spam folder) and could miss out on important information. So the treatment cost for the testee is greater.
 
-* Specificity tells us 94.7% of truly negative guests (90/95) were unimpacted by the policy which means that 5.3% were impacted. 
+* So Specificity is more important in this case as it measures how many legitimate emails were not shown to the recipient and each of these instances has a definite cost to the user.
 
-* Losing a few guests from a wedding is standard so while 50% Precision looks big, the cost to the tester is actually low. So Precision is less important.
-
-* On the other hand missing out on the wedding is a bigger deal for the excluded guests who were False Positives. So Specificity is the better metric to use in this case.
+* Precision is still an interesting metric but it's less important since there is no cost of treatment for the tester.
 
 ## What about Recall and Sensitivity?
 
@@ -107,5 +110,9 @@ image_width: 100%
 * Notice that Specificity mirrors Recall/Sensitivity except it focuses on True Negatives i.e. `P(TN | N)` vs `P(TP | P)`. So specificity really seems like a natural metric to use along side Recall/Sensitivity.
 
 * Recall/Sensitivity is important when considering the cost of doing the test rather than the cost of the treatment. For example if a test has low Recall/Sensitivity, say 5%, you wouldn't take it if it cost lots of money, but if it was free and effortless, then why not. 
+
+## Updates
+
+* **09-11-2023** Improved examples.
 
 _____
