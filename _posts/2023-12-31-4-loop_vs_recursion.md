@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "I love recursive functions but..."
+title:      "Loop vs Recursion"
 permalink: "4"
 subtitle:   
 date:       2023-12-31
@@ -9,8 +9,6 @@ published: true
 tags: [python3, refresh]
 image_width: 50%
 ---
-
-...here's a simple example where recursion is a bad idea. 
 
 Consider a function that is given a list of words and needs to return the number of occurrences of a given letter across all the words.
 
