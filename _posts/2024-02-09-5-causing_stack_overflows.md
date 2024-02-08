@@ -3,7 +3,7 @@ layout:     post
 title:      "Stack Overflow Much?"
 permalink: "5"
 subtitle:   
-date:       2024-02-03
+date:       2024-02-09
 image: "assets/img/5/main.png"
 published: true
 tags: [python3]
@@ -20,14 +20,14 @@ import sys
 import resource
 
 def endless_recursion(depth=0):
-    mem = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024/1024, 3)
+    memory_gb = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024/1024, 3)
     big_list = list(range(10**5))
-    print(f"depth={depth} memory_gb={mem}")
+    print(f"depth={depth} memory_gb={memory_gb}")
     endless_recursion(depth+1)
 
 def main():
-    stack = resource.getrlimit(resource.RLIMIT_STACK)
-    print(f"Stack (soft, hard) =  {stack}")
+    stack_size = resource.getrlimit(resource.RLIMIT_STACK)
+    print(f"Stack (soft, hard) =  {stack_size}")
     sys.setrecursionlimit(10**7)
     endless_recursion(0)
 
@@ -36,14 +36,14 @@ if __name__ == "__main__":
 
 {% endhighlight %}
 
-In the recursive function:
-* A list of 100,000 ints is created (~2.67 mb, an int object is 28 bytes).
+The recursive function:
+* Creates a list of 100,000 ints (~2.67 mb, an int object is 28 bytes).
 
-* The depth of the recursion, the memory used.
+* Prints the depth of the recursion and the memory used in gigabytes.
 
-* The python recursion limit is set to 10,000,000 so that the Python interpreter doesn't stop the recursion.
+* Calls itself. The python recursion limit is set to 10,000,000 so that the Python interpreter doesn't stop the recursion.
 
-When you run this in a debian docker container you get a `137` error code, which is out of memory. Here's the output:
+When you run this in a debian docker container you get a `137` error code, which is the code for out of memory. Here's the output:
 
 ```
 Stack (soft, hard) =  (8388608, -1)
@@ -55,9 +55,9 @@ depth=494 memory_gb=1.572
 137
 ```
 
-The soft stack limit is 8,388,608 bytes which is 8 megabytes and the hard limit is unlimited (-1 in the case of the Python's `getrlimit`). This means that the process has been allocated 8 megabytes for its stack but can request an unlimited amount. The process gets to a recursion depth of 491, uses 1.4 gigabytes of memory and exausts the container memory giving error code 137.
+The soft stack limit is 8,388,608 bytes which is 8 megabytes and the hard limit is unlimited (-1 in the case of Python's `getrlimit`). This means that the process has been allocated 8 megabytes for its stack but can request an unlimited amount. The process gets to a recursion depth of 491, uses 1.4 gigabytes of memory which exausts the container memory giving error code 137.
 
-Let's run this again with a smaller stack size and see what happens. We do this by running `ulimit -s 80` before running the python script which set the soft and hard limit to 80 kilobytes (81,920 bytes). This time we get the same result, more or less, albeit a bit more depth.
+Let's run this again with a smaller stack size and see what happens. We do this by running `ulimit -s 80` before running the python script which set the soft and hard limit to 80 kilobytes (81,920 bytes). This time we get the same result, more or less.
 
 ```
 Stack (soft, hard) =  (81920, 81920)
@@ -109,7 +109,9 @@ depth: 19
 139
 ```
 
-Notice that c++ represents an unlimited hard limit differently than Python. Anyway, this time we get an error code 139 (segmentation fault). It is probably a stack overflow error caused by the recursion since a depth of 20 (19+1) roughly matches the stack size. But I would really like to see an error that says "Stack Overflow"!
+Notice that c++ represents an unlimited hard limit differently than Python. 
+
+Anyway, this time we get an error code 139 (segmentation fault). It is probably a stack overflow error caused by the recursion since a depth of 20 (19+1) roughly matches the stack size. But I would really like to see an error that says "Stack Overflow"!
 
 
 
