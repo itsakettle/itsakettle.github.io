@@ -22,7 +22,7 @@ echo $?
 
 * `-t` specifies an image name.
 
-* `-f` specifies the dockerfile.
+* `-f` specifies the dockerfile. This file should be in the current directory because of the `.` at the end of the build command.
 
 * `-t` connects your terminal to the input and output streams of the container. This is useful if you want to see output as the container command runs.
 
