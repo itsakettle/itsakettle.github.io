@@ -46,5 +46,6 @@ Possible improvements:
 
 * Pass extra arguments on to docker run e.g. memory allocation.
 
+It seems you can achieve something similar with `docker-compose`. However when I tried it I had some difficulty getting stdout and stderr.
 
 _____
