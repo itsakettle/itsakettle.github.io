@@ -3,14 +3,14 @@ layout:     post
 title:      "Docker build, run and remove"
 permalink: "6"
 subtitle:   
-date:       2024-02-09
+date:       2024-02-16
 image: "assets/img/6/main.png"
 published: true
 tags: [docker]
 image_width: 60%
 ---
 
-A mega simple script to build a docker image, run the container and then remove the container. This is useful when you're interating or you want to repeatrun the container like a script or binary many times.
+A _mega_ simple script to build a docker image, run the container and then remove the container. This is useful when you're interating or you want to repeatrun the container like a script or binary many times.
 
 {% highlight bash %}
 #!/bin/bash
