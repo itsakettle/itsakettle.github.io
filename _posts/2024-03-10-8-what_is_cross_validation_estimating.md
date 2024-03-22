@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "What's Cross Validation Estimating?"
+title:      "Cross Validation Drama...?"
 permalink: "8"
 subtitle:   
 date:       2024-03-10

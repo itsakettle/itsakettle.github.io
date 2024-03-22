@@ -7,6 +7,7 @@ date:       2024-02-29
 image: "assets/img/7/main.png"
 published: true
 tags: [docker]
+code: https://github.com/itsakettle/blog-content/tree/main/7-docker_entrypoint_and_cmd
 image_width: 60%
 ---
 
@@ -21,7 +22,6 @@ Here's the dockerfile called `entrypoint_cmd.docker`. Note that there is no `CMD
 FROM python:3.11.8-bullseye
 
 WORKDIR /usr/src/app
-RUN ["python", "-m", "venv", ".venv"]
 COPY ./requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
