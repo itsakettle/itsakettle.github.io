@@ -231,6 +231,21 @@ iframe {
     }
   }
 
+  &-tags-github {
+    @extend .post-tags;
+    color: white;
+    background-color: black;
+
+    .icon {
+    fill: white;
+    height: 13px;
+    width: 13px; 
+}   
+ 
+ }
+
+
+
 }
 
 .banner {

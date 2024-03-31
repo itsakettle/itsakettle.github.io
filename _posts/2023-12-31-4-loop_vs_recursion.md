@@ -7,6 +7,7 @@ date:       2023-12-31
 image: "assets/img/4/main.png"
 published: true
 tags: [python3, refresh]
+code: https://github.com/itsakettle/blog-content/tree/main/4-loop_vs_recursion
 image_width: 50%
 ---
 
