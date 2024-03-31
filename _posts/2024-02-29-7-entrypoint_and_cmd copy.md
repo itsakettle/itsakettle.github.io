@@ -11,7 +11,7 @@ code: https://github.com/itsakettle/blog-content/tree/main/7-docker_entrypoint_a
 image_width: 60%
 ---
 
-When a docker container kicks off the `ENTRYPOINT` instruction is run and the commands/arguments from the `CMD` instruction are passed to it as arguments.
+When a docker container kicks off the `ENTRYPOINT` instruction is run, and the commands/arguments from the `CMD` instruction are passed to it as arguments.
 
 ## Executable Pattern
 When you want the docker container to act like an executable you can use `CMD` to pass _arguments_ to the `ENTRYPOINT`. Below is an example that will fetch data from the Irish Single Electricty Market website. 
