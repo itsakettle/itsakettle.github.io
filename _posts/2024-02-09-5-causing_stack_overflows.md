@@ -7,6 +7,7 @@ date:       2024-02-09
 image: "assets/img/5/main.png"
 published: true
 tags: [python3, curiosity]
+code: https://github.com/itsakettle/blog-content/tree/main/5-stack_overflow_much
 image_width: 60%
 ---
 

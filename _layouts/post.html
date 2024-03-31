@@ -6,10 +6,20 @@ layout: default
 <div class="post-date">{{ page.date | date: "%d %B %Y" }}</div>
 <div class="post-tags-words-container">
   {% assign post_words = page.content | strip_html | number_of_words %}
-  <div class="post-tags">{{ post_words }} words</div>
+  <div class="post-tags">{{ post_words }} words</div> 
   {% for tag in page.tags %}
   <div class="post-tags">{{ tag }}</div>
   {% endfor %}
+  
+  {% if page.code %}
+  <a id=github class="post-tags-github" href="{{page.code}}">                      
+     <svg class="icon" viewBox="0 0 24 24">                                        
+          <path  d="{{site.data.svg_icons.github.svg_path}}" />                                       
+     </svg>
+     code
+   </a>   
+   {% endif %}                  
+
 </div>
 
 {{ content }}
