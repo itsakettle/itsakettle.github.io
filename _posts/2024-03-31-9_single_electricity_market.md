@@ -53,6 +53,7 @@ If I remember correctly the pre 2018 SEM had a half hourly capacity price as wel
 
 This seems to have been replaced with capacity auctions occurring very far in advance (years) and covering long periods (again years). Interestingly there is a strike price associated with capacity. If the balancing price goes above this price then the generators must pay the difference back to the suppliers. It's like a CfD. I don't really understand the intention or consequences of this yet, though it obviously reduces peak balancing prices for suppliers. 
 
-## How about a simple example to tie it all together?
+Let's leave it there for now.
+
  
 _____
