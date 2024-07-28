@@ -3,10 +3,10 @@ layout:     post
 title:      "Minimal database"
 permalink: "12"
 subtitle:   
-date:       2024-07-20
+date:       2024-07-28
 image: "assets/img/self_qa.png"
 published: true
-tags: [q&a, databases]
+tags: [q&a, data]
 code: 
 image_width: 60%
 ---
