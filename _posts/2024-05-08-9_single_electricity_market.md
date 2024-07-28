@@ -4,9 +4,9 @@ title:      "Ireland's Single Electricity Market: Self Q&A"
 permalink: "9"
 subtitle:   
 date:       2024-05-08
-image: "assets/img/9/main.png"
+image: "assets/img/self_qa.png"
 published: true
-tags: [q&a]
+tags: [q&a, electricity]
 image_width: 60%
 ---
 
