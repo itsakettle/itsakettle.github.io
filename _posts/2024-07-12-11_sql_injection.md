@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Crow’s treasure API: A SQL injection attack"
+title:      "Crow’s Treasure API: A SQL Injection Attack"
 permalink: "11"
 subtitle:   
 date:       2024-07-12
