@@ -11,8 +11,7 @@ code:
 image_width: 60%
 ---
  
-#### I want to store tabular data in s3. I want there to be zero infrastructure so as to reduce cost, maintenance and minimise system complexity. I just want to write to a file and read it, update it and read it. Keep it simple. I’m thinking I’ll just write to a parquet file and when I want to write to it again, I’ll read it using 
-Polars, append the rows and then overwrite the file. What do you think?
+#### I want to store tabular data in S3. I want there to be zero infrastructure so as to reduce cost, maintenance and minimise system complexity. I just want to write to a file and read it, update it and read it. Keep it simple. I’m thinking I’ll just write to a parquet file and when I want to write to it again, I’ll read it using Polars, append the rows and then overwrite the file. What do you think?
 
 Who will be using this “database”?
 
@@ -22,7 +21,7 @@ Ok so latency and handling a large number of concurrent connections isn’t real
 
 #### Not initially but over time it could grow and there could potentially be something like a feature store. 
 
-Ok so it would be good for it to scale nicely. I guess for data recovery you could use s3 backup features like versioning and replication across regions. 
+Ok so it would be good for it to scale nicely. I guess for data recovery you could use S3 backup features like versioning and replication across regions. 
 
 Any chance of concurrent reads and writes? 
 
@@ -43,7 +42,7 @@ You need something that implements ACID transactions. Atomic, Consistent, Isolat
 SQLite stores it’s data in a single file and there is no server. So things look good until you realise it needs a file system to operate directly. S3 is just object storage. It’s not a file system. So things like transactions probably won’t work, though I haven’t checked. 
 
 #### Ok which is best for me?
-Hudi is generally considered more complex, I haven’t looked into the detail of that but let’s put it to one side.  Delta is obviously first and foremost used with Databricks but it is an open table format and is supported by tools like Polars. Iceberg is well supported as well. Delta and Iceberg both give you ACID transactions and will work on s3. They probably both meet the requirements so the only way to choose is to test them out and see which suits best. 
+Hudi is generally considered more complex, I haven’t looked into the detail of that but let’s put it to one side.  Delta is obviously first and foremost used with Databricks but it is an open table format and is supported by tools like Polars. Iceberg is well supported as well. Delta and Iceberg both give you ACID transactions and will work on S3. They probably both meet the requirements so the only way to choose is to test them out and see which suits best. 
 
 
 
