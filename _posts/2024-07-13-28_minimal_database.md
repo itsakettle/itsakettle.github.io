@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Minimal database"
+title:      "Minimal Database"
 permalink: "12"
 subtitle:   
 date:       2024-07-28
