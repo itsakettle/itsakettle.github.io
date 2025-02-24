@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Managed Identities , Assume Role and OpenID Connect"
+title:      "Managed Identities, Assume Role and OpenID Connect"
 permalink: "13"
 subtitle:   
 date:       2025-02-24
