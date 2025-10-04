@@ -8,10 +8,10 @@ image: "assets/img/17/main.png"
 published: true
 tags: [curiosity]
 code: 
-image_width: 50%
+image_width: 70%
 ---
 
-Occasionally, in everyday conversation unrelated to computers, people say “it’s a software issue, not hardware”. It’s an analogy we understand intuitively, but it makes me wonder what, exactly, is software? Does it exist organically? So when Sabine Hossenfelder discussed a paper about emergent behaviour in complex systems through the lens of software, I put it at the top of my reading list. It is rigorous, defining concepts such as “software like” in terms of causally closed epsilon machines, but I am more interested in growing my intuition of the core concept. 
+Occasionally, in everyday conversation unrelated to computers, people say “it’s a software issue, not hardware”. It’s an analogy we understand intuitively, but it makes me wonder what, exactly, is software? Does it exist organically? So when Sabine Hossenfelder discussed a paper about [emergent behaviour in complex systems through the lens of software](https://arxiv.org/abs/2402.09090), I put it at the top of my reading list. It is rigorous, defining concepts such as “software like” in terms of causally closed epsilon machines, but I am more interested in growing my intuition of the core concept. 
 
 ## What is Software
 The example given is when we assign a variable ‘x=1’, or whatever, which updates the state of the software. At a lower level the state of the underlying hardware is also updated to reflect the assignment. A key feature of software is that it is agnostic to how the hardware implements its state. 
@@ -31,4 +31,5 @@ Now let’s say we have the hardware process, but let’s call it the micro proc
 
 ## So what?
 We can think of the macro states as an emergent software like process “running” on the micro states. That’s the basic intuition I want to remember - there’s much more in the paper. Frameworks like this might help us better understand natural processes such as the weather, or even the emergent behaviour of LLMs.
+
 ___
